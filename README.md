@@ -11,13 +11,13 @@ tests and continuous integration you can inspect:
 
 | repository | what it does | what it shows |
 |---|---|---|
-| [**market-data-warehouse**](https://github.com/david-rodriguez-dev/market-data-warehouse) | SEC EDGAR company facts → DuckDB, with dbt-style SQL layers, a point-in-time `facts_as_of(date)` macro, and 13 SQL quality assertions | data engineering: idempotent loads, versioned facts, restatement tracking, the discipline of asserting on real data |
-| [**equity-fundamentals-sql**](https://github.com/david-rodriguez-dev/equity-fundamentals-sql) | the SEC bulk Financial Statement Data Sets — every US filer — loaded as four relational tables, with twelve analytical queries: Piotroski, Altman Z″, DuPont, sector percentiles, quarters derived from year-to-date filings, restatements, a no-look-ahead screen | SQL depth: window functions, QUALIFY, UNPIVOT, NULL-safe ranking, and twelve design notes on what 14 million real values taught the models |
-| [**portfolio-risk-report**](https://github.com/david-rodriguez-dev/portfolio-risk-report) | daily prices → returns, drawdowns, three VaR estimators, Euler risk contributions, benchmark statistics → one self-contained HTML report with inline SVG charts | Python: pure, tested numerics (35 hand-computed cases), a bond total-return proxy from a yield series, no plotting dependency |
+| [**market-data-warehouse**](https://github.com/davrod-dev/market-data-warehouse) | SEC EDGAR company facts → DuckDB, with dbt-style SQL layers, a point-in-time `facts_as_of(date)` macro, and 13 SQL quality assertions | data engineering: idempotent loads, versioned facts, restatement tracking, the discipline of asserting on real data |
+| [**equity-fundamentals-sql**](https://github.com/davrod-dev/equity-fundamentals-sql) | the SEC bulk Financial Statement Data Sets — every US filer — loaded as four relational tables, with twelve analytical queries: Piotroski, Altman Z″, DuPont, sector percentiles, quarters derived from year-to-date filings, restatements, a no-look-ahead screen | SQL depth: window functions, QUALIFY, UNPIVOT, NULL-safe ranking, and twelve design notes on what 14 million real values taught the models |
+| [**portfolio-risk-report**](https://github.com/davrod-dev/portfolio-risk-report) | daily prices → returns, drawdowns, three VaR estimators, Euler risk contributions, benchmark statistics → one self-contained HTML report with inline SVG charts | Python: pure, tested numerics (35 hand-computed cases), a bond total-return proxy from a yield series, no plotting dependency |
 
-[![market-data-warehouse ci](https://github.com/david-rodriguez-dev/market-data-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/david-rodriguez-dev/market-data-warehouse/actions)
-[![equity-fundamentals-sql ci](https://github.com/david-rodriguez-dev/equity-fundamentals-sql/actions/workflows/ci.yml/badge.svg)](https://github.com/david-rodriguez-dev/equity-fundamentals-sql/actions)
-[![portfolio-risk-report ci](https://github.com/david-rodriguez-dev/portfolio-risk-report/actions/workflows/ci.yml/badge.svg)](https://github.com/david-rodriguez-dev/portfolio-risk-report/actions)
+[![market-data-warehouse ci](https://github.com/davrod-dev/market-data-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/market-data-warehouse/actions)
+[![equity-fundamentals-sql ci](https://github.com/davrod-dev/equity-fundamentals-sql/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/equity-fundamentals-sql/actions)
+[![portfolio-risk-report ci](https://github.com/davrod-dev/portfolio-risk-report/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/portfolio-risk-report/actions)
 
 ## How I work
 
