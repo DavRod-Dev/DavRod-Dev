@@ -6,7 +6,7 @@ and analytics that say something true about it. I work with Claude Code
 and treat it the way I'd treat a strong pair: it types and drafts, I decide
 what to build, check every number, and own what ships.
 
-Three repositories, each written from scratch for this profile, each with
+Four repositories, each written from scratch for this profile, each with
 tests and continuous integration you can inspect:
 
 | repository | what it does | what it shows |
@@ -14,10 +14,12 @@ tests and continuous integration you can inspect:
 | [**market-data-warehouse**](https://github.com/davrod-dev/market-data-warehouse) | SEC EDGAR company facts → DuckDB, with dbt-style SQL layers, a point-in-time `facts_as_of(date)` macro, and 13 SQL quality assertions | data engineering: idempotent loads, versioned facts, restatement tracking, the discipline of asserting on real data |
 | [**equity-fundamentals-sql**](https://github.com/davrod-dev/equity-fundamentals-sql) | the SEC bulk Financial Statement Data Sets — every US filer — loaded as four relational tables, with twelve analytical queries: Piotroski, Altman Z″, DuPont, sector percentiles, quarters derived from year-to-date filings, restatements, a no-look-ahead screen | SQL depth: window functions, QUALIFY, UNPIVOT, NULL-safe ranking, and twelve design notes on what 14 million real values taught the models |
 | [**portfolio-risk-report**](https://github.com/davrod-dev/portfolio-risk-report) | daily prices → returns, drawdowns, three VaR estimators, Euler risk contributions, benchmark statistics → one self-contained HTML report with inline SVG charts | Python: pure, tested numerics (35 hand-computed cases), a bond total-return proxy from a yield series, no plotting dependency |
+| [**finance-dashboards-powerbi**](https://github.com/davrod-dev/finance-dashboards-powerbi) | Power BI over the three repos above: a star-schema semantic model and a four-page report (fundamentals screen, company detail, portfolio risk, correlation/calendar), generated as a TMDL + PBIR project, exported as `.pbix` and PDF | BI: dimensional modelling, 54 documented DAX measures, pages that refuse to show a misleading aggregate, and CI that validates every visual's fields against the model |
 
 [![market-data-warehouse ci](https://github.com/davrod-dev/market-data-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/market-data-warehouse/actions)
 [![equity-fundamentals-sql ci](https://github.com/davrod-dev/equity-fundamentals-sql/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/equity-fundamentals-sql/actions)
 [![portfolio-risk-report ci](https://github.com/davrod-dev/portfolio-risk-report/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/portfolio-risk-report/actions)
+[![finance-dashboards-powerbi ci](https://github.com/davrod-dev/finance-dashboards-powerbi/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/finance-dashboards-powerbi/actions)
 
 ## How I work
 
@@ -41,7 +43,7 @@ tests and continuous integration you can inspect:
 ## Stack
 
 SQL (DuckDB; standard enough to move to Postgres), Python 3.11+ (pandas,
-numpy, requests, pytest), GitHub Actions. Sources used here: SEC EDGAR
+numpy, requests, pytest), Power BI (TMDL, PBIR, DAX), GitHub Actions. Sources used here: SEC EDGAR
 APIs and bulk data sets, FRED.
 
 ## Looking for
