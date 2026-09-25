@@ -23,13 +23,15 @@ tests and continuous integration you can inspect:
 
 ## How I work
 
-- **Real data before done.** Each repository was finished and green on a
-  synthetic fixture first, then run against the real source — and every
-  one of them broke somewhere. Those breaks are written up as numbered
+- **Real data before done.** Each repository was finished and green
+  offline first — on a synthetic fixture, or on the committed dataset for
+  the BI layer — then run against the real source or the real product, and
+  every one of them broke somewhere. Those breaks are written up as numbered
   *design notes* in each README: a `segments` column that turned Walmart's
   gross profit negative, an 8-K comparative that erased Apple's 2013
   balance sheet, a capture ratio that compounded 1,300 up-days into
-  nonsense. Fixed in the model, never by loosening the test.
+  nonsense, a one-character flag that crashed Power BI's table renderer.
+  Fixed in the model, never by loosening the test.
 - **Assertions over assumptions.** Data-quality checks are SQL files that
   return the rows that violate an expectation; zero rows passes, and a
   failure shows you exactly which company-year is wrong.
